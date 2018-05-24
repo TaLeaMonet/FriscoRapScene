@@ -2,4 +2,26 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display:table;
+  height:100%;
+  width:100%;
 }
+
+.navbar{
+  background-color: orange;
+}
+
+.wrapper {
+  padding:20px;
+  height:auto;
+}
+
+ footer {
+   background-color:orange;
+   display:table-row;
+   height:50px;
+   width:100%;
+   position:fixed;
+   bottom:0px;
+
+ }
