@@ -1,7 +1,6 @@
 # FriscoRapScene
 Online platform dedicated to providing support and exposure to local musicians.
-[Google Docs Project Plan]
-(https://docs.google.com/document/d/1VeNOotN3L_lYcabDLT5oVjgLYO6SmqnziV2deHRebAQ)
+[Google Docs Project Plan](https://docs.google.com/document/d/1VeNOotN3L_lYcabDLT5oVjgLYO6SmqnziV2deHRebAQ)
 
 -setup/installation instructions:
 run npm install
