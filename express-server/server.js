@@ -18,7 +18,7 @@ const connection = mysql.createConnection({
 
 connection.connect(err => {
   if (err) throw err;
-  connection.query("INSERT INTO videos (title, length) VALUES ('lemonade', 4)", (err, results) => {
+  connection.query("INSERT INTO videos (title) VALUES ('lemonade')", (err, results) => {
     if(err) throw err;
   })
 })
