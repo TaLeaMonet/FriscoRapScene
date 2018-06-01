@@ -20,13 +20,6 @@ const connection = mysql.createConnection({
   database: "Frisco Rap Scene"
 });
 
-connection.connect(err => {
-  if (err) throw err;
-  connection.query("INSERT INTO videos (title, artist, link) VALUES ('Next Move', 'Ms. Incredible', 'https://youtu.be/XFtUOrbXTCI')", (err, results) => {
-    if(err) throw err;
-  })
-})
-
 app.get('/videos', function (req, res) {
   let videos = connection.query("SELECT * FROM videos", (err, results) => {
     if(err) throw err;

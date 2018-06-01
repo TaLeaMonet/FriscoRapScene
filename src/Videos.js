@@ -9,7 +9,6 @@ export default class Videos extends Component {
         response: ''
       }
     }
-
     componentDidMount () {
       console.log("did it work?");
       fetch('/videos', {
