@@ -18,8 +18,9 @@ export default class Submit extends Component {
           you want featured and select 'embed'. Copy the youtube link and enter it into the form below along with your artist name and
           the name of the song.
           </p> <br/>
-
           <form>
+<div className="container">
+
   <div className="form-group">
  <b>Artist Name </b>
     <input type="name" className="form-control" id="name" placeholder="Enter name"></input>
@@ -43,8 +44,7 @@ export default class Submit extends Component {
   <button type="submit" className="btn btn-primary">Submit</button>
   </form>
   </div>
-
-
+</div>
     )
   }
 }
