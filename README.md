@@ -1,15 +1,15 @@
 # FriscoRapScene
-Online platform dedicated to providing support and exposure to local musicians.
+Online platform dedicated to providing support and exposure to San Francisco based musicians.
 
-<a href="https://docs.google.com/document/d/1VeNOotN3L_lYcabDLT5oVjgLYO6SmqnziV2deHRebAQ/edit">Google Docs Project Plan</a>
+[Google Docs Project Plan](https://docs.google.com/document/d/1VeNOotN3L_lYcabDLT5oVjgLYO6SmqnziV2deHRebAQ)
 
 -setup/installation instructions:
-run npm install
+``run npm install``
 
 
 -command to start frontend & server
-to start create-react-app run yarn start
-to start server run node server.js
+to start create-react-app run ``yarn start``
+to start server run ``node server.js``
 
 -db Setup
 create a database named frisco-rap-Scene

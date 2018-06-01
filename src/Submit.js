@@ -39,7 +39,6 @@ export default class Submit extends Component {
           you want featured and select 'embed'. Copy the youtube link and enter it into the form below along with your artist name and
           the name of the song.
           </p> <br/>
-
           <form>
           <div className="form-group">
             <b>Song Link</b>
