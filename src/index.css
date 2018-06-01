@@ -25,3 +25,27 @@ body {
    bottom:0px;
 
  }
+
+.homepage-welcome {
+  font-family: Lobster, cursive;
+  font-size: 55px;
+}
+
+.navbar{
+  background-color: orange;
+}
+
+.wrapper {
+  padding:20px;
+  height:auto;
+}
+
+ footer {
+   background-color:orange;
+   display:table-row;
+   height:50px;
+   width:100%;
+   position:fixed;
+   bottom:0px;
+
+ }
