@@ -24,13 +24,6 @@ export default class Videos extends Component {
         .then(res => {
           console.log(res);
           this.setState({videos: res})
-          // let list = '<ul>';
-          // res.forEach(visual => {
-          //   list += `<li>Name: ${visual.artist}, Title:${visual.title} Link: ${visual.link}</li>`
-          // })
-          // list += '</ul>';
-          //
-          // document.getElementById('results').innerHTML = list;
         })
         .catch(err => {
           console.log(err)
