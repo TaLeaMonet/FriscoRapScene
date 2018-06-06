@@ -30,7 +30,7 @@ export default class Videos extends Component {
     }
     render () {
       return (
-        <div>
+        <div className="container">
           <h1>Videos</h1>
 
           {
@@ -40,7 +40,8 @@ export default class Videos extends Component {
                 title={video.title}
                 width='300'
                 height='300'
-                src={video.link} key={video.link}>
+                src={video.link} key={video.link} allowfullscreen
+                allow="autoplay; encrypted-media">
               </iframe>)
             })
           }
