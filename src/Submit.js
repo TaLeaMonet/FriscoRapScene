@@ -1,36 +1,25 @@
 import React, { Component } from 'react';
+import ArtistForm from './artist-form';
+import SubmitMusicForm from './submit-music-form';
+
 
 export default class Submit extends Component {
   render () {
     return (
-        <div>
+        <div className="container">
           <h1>Submissions: How To Get Your Content Featured On Frisco Rap Scene</h1>
           <h2>Artist Submissions</h2>
           <p>
           To have your content featured on Frisco Rap Scene you must be based in San Francisco.
-          Please enter your name, email address and zip code in the form below.
+          Please enter your artist name, email address and zip code in the form below.
           </p>
-          <form>
-          <div className="form-group">
-          <b>Artist Name </b>
-          <input type="name" className="form-control" id="name" placeholder="Enter name"></input>
-          </div>
-          <div className="form-group">
-          <b>Email</b>
-          <input type="email" className="form-control" id="email" placeholder="Enter email"></input>
-        </div>
-        <div className="form-group">
-          <b>Location</b>
-          <input type="zip-code" className="form-control" id="zip-code" placeholder="Enter Location"></input>
-        </div>
-        </form>
-
-
+          <ArtistForm />
 
           <h2>Song Submissions:</h2>
           <p>
           To have your songs featured on the Frisco Rap Scene website, you <b>must</b> have a Spotify account.
-          Log in to your Spotify account and select the song you want featured. Copy the song link and enter it into the form below.
+          Log in to your Spotify account and select the song you want featured. Copy the song link and enter it into the form below
+          along with your artist name and the name of the song.
           </p>
 
           <h2>Video Submissions:</h2>
@@ -39,18 +28,10 @@ export default class Submit extends Component {
           you want featured and select 'embed'. Copy the youtube link and enter it into the form below along with your artist name and
           the name of the song.
           </p> <br/>
-          <form>
-          <div className="form-group">
-            <b>Song Link</b>
-            <input type="song" className="form-control" id="song-link" placeholder="Enter song link"></input>
+          <div className="card">
+            <SubmitMusicForm />
           </div>
-          <div className="form-group">
-            <b>Video Link</b>
-            <input type="video" className="form-control" id="location" placeholder="Enter video link"></input>
-          </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
-          </div>
+        </div>
 
 
 
