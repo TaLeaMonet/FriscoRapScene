@@ -7,7 +7,8 @@ const mySqlKey = require('./keys').mySql
 const cors = require('cors')
 const requestPromise = require( 'request-promise' );
 const PORT = process.env.PORT || 3000;
-const REDIRECT_URI = process.env.REDIRECT_URI;
+const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/user';
+const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 
 
 app.use(cors())
@@ -16,24 +17,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-let redirect_uri = process.env.REDIRECT_URI || 'http://localhost:3000/login'
-
-app.get('/login', function(req, res) {
-  var scopes = 'user-read-private user-read-email';
-  res.redirect('https://accounts.spotify.com/authorize' +
-    '?response_type=code' +
-    '&client_id=' + SPOTIFY_CLIENT_ID +
-    (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
-    '&redirect_uri=' + encodeURIComponent(REDIRECT_URI));
+app.get('/spotifylogin', function(req, res) {
+  console.log(SPOTIFY_CLIENT_ID);
+  res.send("hello");
 });
 
-app.get('/checkcreds', (req, res) => {
-  res.redirect('/')
+app.get('/user', (req, res) => {
+  res.redirect('/music')
 })
 
 app.get('/', (req, res) => {
-  res.send('/music')
+  res.send('')
 })
+
 
 
 
@@ -46,6 +42,15 @@ const connection = mysql.createConnection({
 
 app.get('/videos', function (req, res) {
   let videos = connection.query("SELECT * FROM videos", (err, results) => {
+    if(err) throw err;
+    console.log(JSON.parse(JSON.stringify(results)));
+    res.json(results);
+  })
+});
+
+
+app.get('/songs', function (req, res) {
+  let songs = connection.query("SELECT * FROM songs", (err, results) => {
     if(err) throw err;
     console.log(JSON.parse(JSON.stringify(results)));
     res.json(results);
@@ -66,15 +71,26 @@ app.post('/artist-form', function (req, res) {
 })
 
 
-app.post('/submit-music-form', function (req, res) {
-  console.log(req.body.title);
-  let artist = req.body.artist;
-  let title = req.body.title.replace(/'+/g, "");
-  let link = req.body.link;
-  let musicSubmit = connection.query("INSERT INTO videos (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+link+"')", (err, results) => {
-    if(err) throw err;
-  });
-})
+ app.post('/submit-music-form', function (req, res) {
+   let artist = req.body.artist;
+   let title = req.body.title.replace(/'+/g, "");
+   let link = req.body.link;
+   let song = req.body.song;
+   if (link !== undefined) {
+     let videoSubmit = connection.query("INSERT INTO videos (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+link+"')", (err, results) => {
+     if(err) throw err;
+     })
+   }
+   if (song !== undefined) {
+     let ary = song.split('/');
+     let id = ary[ary.length -1];
+     let songSubmit = connection.query("INSERT INTO songs (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+id+"')", (err, results) => {
+        if(err) throw err;
+     });
+   }
+ })
+
+
 
 
 const port = process.env.PORT || 8080;

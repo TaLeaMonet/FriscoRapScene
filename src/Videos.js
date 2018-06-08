@@ -35,14 +35,22 @@ export default class Videos extends Component {
 
           {
             this.state.videos.map(video => {
-              console.log(video)
-              return (<iframe
+
+              return (<div key={video.link}>
+                <iframe
                 title={video.title}
                 width='300'
                 height='300'
-                src={video.link} key={video.link} allowfullscreen
+                src={video.link}  allowFullScreen
                 allow="autoplay; encrypted-media">
-              </iframe>)
+
+                </iframe>
+
+                <p>{video.artist} <br/>
+                {video.title}
+                </p>
+                </div>
+                )
             })
           }
           </div>
