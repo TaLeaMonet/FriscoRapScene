@@ -2,21 +2,6 @@ import React, { Component } from 'react';
 
 
 
-// export default class Music extends Component {
-//   render () {
-    // var str = "https://open.spotify.com/track/4HiuT2pdJzwdSKf72aSdhs";
-    // // console.log(str.split('/'));
-//     var ary = str.split('/');
-//     var embed_url = "https://open.spotify.com/embed/track/" + ary[ary.length -1];
-// //
-//     return (
-        // <div>
-        //     <h1>Music</h1>
-        //     <iframe src={embed_url} width="300" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        // </div>
-//     )
-//   }
-
 export default class Music extends Component {
     constructor(props){
       super(props)
@@ -57,8 +42,15 @@ export default class Music extends Component {
 
               return (
 
-                <div>
-                    <iframe src={embed_url} width="300" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <div key={song.link}>
+                    <iframe
+                    title={song.title}
+                    src={embed_url}
+                    width="300"
+                    height="80"
+                    frameBorder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"></iframe>
                 </div>
                 )
             })

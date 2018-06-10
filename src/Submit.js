@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ArtistForm from './artist-form';
-import SubmitMusicForm from './submit-music-form';
+import SubmitVideoForm from './submit-video-form';
+import SubmitSongForm from './submit-song-form';
 
 
 export default class Submit extends Component {
@@ -21,6 +22,7 @@ export default class Submit extends Component {
           Log in to your Spotify account and select the song you want featured. Copy the song link and enter it into the form below
           along with your artist name and the name of the song.
           </p>
+          <SubmitSongForm />
 
           <h2>Video Submissions:</h2>
           <p>
@@ -29,7 +31,7 @@ export default class Submit extends Component {
           the name of the song.
           </p> <br/>
           <div className="card">
-            <SubmitMusicForm />
+            <SubmitVideoForm />
           </div>
         </div>
 

@@ -7,6 +7,11 @@ import Search from './Search';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 export default class Navbar extends Component {
+  onSearch(event) {
+    event.preventDefault()
+    window.location.href = "/search"
+  }
+
   render() {
     return (
   <Router>
@@ -31,9 +36,9 @@ export default class Navbar extends Component {
     </ul>
     <form className="navbar-form navbar-right">
       <div className="form-group">
-        <input type="text" className="form-control" placeholder="Search" />
+        <input type="text" name="query" className="form-control" placeholder="Search" />
       </div>
-    <Link to="/search" type="submit" className="btn btn-default">Submit</Link>
+    <Link to="submit" className="btn btn-default">Submit</Link>
     </form>
       </div>
     </nav>
