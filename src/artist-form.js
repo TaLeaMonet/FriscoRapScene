@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class ArtistForm extends Component {
   render () {
     return (
-        <div>
+        <div className="artist-form">
         <form action="/artist-form" method="post">
         <div className="form-group">
         <b>Artist Name </b>

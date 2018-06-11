@@ -37,11 +37,17 @@ export default class Navbar extends Component {
     </form>
       </div>
     </nav>
-    <Route exact path="/" component={Home}/>
-    <Route exact path="/music" component={Music}/>
-    <Route exact path="/videos" component={Videos}/>
-    <Route exact path="/submit" component={Submit}/>
-    <Route exact path="/search" component={Search}/>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-3 offset-3">
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/music" component={Music}/>
+        <Route exact path="/videos" component={Videos}/>
+        <Route exact path="/submit" component={Submit}/>
+        <Route exact path="/search" component={Search}/>
+      </div>
+      </div>
+      </div>
     </div>
    </Router>
     );

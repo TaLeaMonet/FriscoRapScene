@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const mysql = require("mysql");
-const mySqlKey = require('./keys').mySql
+// const mySqlKey = require('./keys').mySql
 const cors = require('cors')
 const requestPromise = require( 'request-promise' );
-const PORT = process.env.PORT || 3000;
+const PORT = 8080 //process.env.PORT || // 8080;
 const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/user';
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 
@@ -71,27 +71,30 @@ app.post('/artist-form', function (req, res) {
 })
 
 
- app.post('/submit-music-form', function (req, res) {
+ app.post('/submit-video-form', function (req, res) {
    let artist = req.body.artist;
    let title = req.body.title.replace(/'+/g, "");
    let link = req.body.link;
    let song = req.body.song;
-   if (link !== undefined) {
-     let videoSubmit = connection.query("INSERT INTO videos (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+link+"')", (err, results) => {
+   let videoSubmit = connection.query("INSERT INTO videos (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+link+"')", (err, results) => {
      if(err) throw err;
      })
-   }
-   if (song !== undefined) {
+   })
+
+   app.post('/submit-song-form', function (req, res) {
+     let artist = req.body.artist;
+     let title = req.body.title.replace(/'+/g, "");
+     let link = req.body.link;
+     let song = req.body.song;
      let ary = song.split('/');
      let id = ary[ary.length -1];
      let songSubmit = connection.query("INSERT INTO songs (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+id+"')", (err, results) => {
         if(err) throw err;
      });
-   }
- })
+   })
 
 
 
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
