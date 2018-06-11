@@ -42,7 +42,8 @@ export default class Music extends Component {
               return (
 
                 <div key={song.id}>
-                  <iframe 
+                  <iframe
+                    title={song.title}
                     src={embed_url}
                     width="300" height="80"
                     frameBorder="0" allowtransparency="true"
