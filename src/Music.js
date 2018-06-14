@@ -32,7 +32,7 @@ export default class Music extends Component {
     render () {
       return (
         <div className="music-container">
-          <h1>Music</h1>
+          <h1 className="page-heading">Music</h1>
 
           {
             this.state.songs.map(song => {
