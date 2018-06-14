@@ -4,9 +4,12 @@ import Music from './Music';
 import Videos from './Videos';
 import Submit from './Submit';
 import Search from './Search';
+import SearchForm from './search-form';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
+
 export default class Navbar extends Component {
+
   render() {
     return (
   <Router>
@@ -29,26 +32,20 @@ export default class Navbar extends Component {
       <li><Link to="/videos">Videos</Link></li>
       <li><Link to="/submit">Submit</Link></li>
     </ul>
-    <form className="navbar-form navbar-right">
-      <div className="form-group">
-        <input type="text" className="form-control" placeholder="Search" />
+
+  <SearchForm />
+
       </div>
-    <Link to="/search" type="submit" className="btn btn-default">Submit</Link>
-    </form>
-      </div>
+
     </nav>
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-3 offset-3">
+    <div>
         <Route exact path="/" component={Home}/>
         <Route exact path="/music" component={Music}/>
         <Route exact path="/videos" component={Videos}/>
         <Route exact path="/submit" component={Submit}/>
-        <Route exact path="/search" component={Search}/>
+        <Route path="/search/:input" component={Search}/>
+        </div>
       </div>
-      </div>
-      </div>
-    </div>
    </Router>
     );
   }

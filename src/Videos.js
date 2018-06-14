@@ -10,10 +10,9 @@ export default class Videos extends Component {
       }
     }
     componentDidMount () {
-      console.log("did it work?");
       fetch('/videos', {
         method: 'GET',
-        header: {
+        headers: {
           'content-type': 'application/json'
         }
       })
@@ -28,10 +27,27 @@ export default class Videos extends Component {
           console.log(err)
         })
     }
+
+    // function mapResults() {
+    //   this.state.videos.map(video => {
+    //
+    //     return (<div className="box" key={video.id}>
+    //       <iframe
+    //       title={video.title}
+    //       width='350'
+    //       height='350'
+    //       src={video.link}  allowFullScreen
+    //       allow="autoplay; encrypted-media">
+    //       </iframe>
+    //
+    // }
+
+
     render () {
       return (
         <div>
           <h1>Videos</h1>
+
 
           {
             this.state.videos.map(video => {
@@ -43,7 +59,6 @@ export default class Videos extends Component {
                 height='350'
                 src={video.link}  allowFullScreen
                 allow="autoplay; encrypted-media">
-
                 </iframe>
 
                 <p>{video.artist} <br/>

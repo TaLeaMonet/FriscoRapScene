@@ -11,13 +11,15 @@ const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/user';
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 
 
+
+
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-app.get('/spotifylogin', function(req, res) {
+app.get('/spotifylogin', (req, res) => {
   console.log(SPOTIFY_CLIENT_ID);
   res.send("hello");
 });
@@ -51,9 +53,23 @@ app.get('/videos', function (req, res) {
 
 app.get('/songs', function (req, res) {
   let songs = connection.query("SELECT * FROM songs", (err, results) => {
-    if(err) throw err;
     console.log(JSON.parse(JSON.stringify(results)));
+    if(err) throw err;
     res.json(results);
+  })
+});
+
+app.post('/search', function (req, res) {
+  let query = req.query.query;
+  console.log(req.query.query);
+  console.log('hello')
+  connection.query(`SELECT * FROM songs WHERE title LIKE '%${query}%'`, (err, songs) => {
+    if(err) throw err;
+    console.log(JSON.parse(JSON.stringify(songs)));
+    let videos = connection.query(`SELECT * FROM videos WHERE title LIKE '%${query}%'`, (err, video) => {
+      if(err) throw err;
+      res.json(songs.concat(video));
+    })
   })
 });
 
@@ -61,13 +77,17 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
+
 app.post('/artist-form', function (req, res) {
+  console.log(req);
   let artist = req.body.artist;
   let email = req.body.email;
   let location = req.body.location;
   let artistSubmit = connection.query("INSERT INTO artists (artist, email, location) VALUES('"+req.body.artist+"', '"+req.body.email+"', '"+req.body.location+"')", (err, results) => {
     if(err) throw err;
+    res.sendStatus(200);
   });
+
 })
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import Footer from './footer.js';
+import './App.css';
 
 
 class App extends Component {

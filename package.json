@@ -14,6 +14,7 @@
     "passport-http-oauth": "^0.1.3",
     "react": "^16.3.2",
     "react-backend": "^1.1.2",
+    "react-bootstrap-typeahead": "^3.1.4",
     "react-dom": "^16.3.2",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
@@ -23,9 +24,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
-    "dev-migrate" : "db-migrate up --config express-server/database.json -e dev"
+    "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
   },
   "proxy": "http://localhost:8080"
 }

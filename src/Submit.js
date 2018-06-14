@@ -19,7 +19,7 @@ export default class Submit extends Component {
           <p>
           To have your songs featured on the Frisco Rap Scene website, you <b>must</b> have a Spotify account.
           Log in to your Spotify account and select the song you want featured. Copy the song link and enter it into the form below
-          along with your artist name and the name of the song.
+          along with your artist name and the name of the song. <a href="http://www.spotify.com" target="_blank" rel="noopener noreferrer">Login to your Spotify account here</a>
           </p>
           <SubmitSongForm />
 

@@ -12,7 +12,7 @@ export default class Music extends Component {
     }
     componentDidMount () {
       console.log("did it work?");
-      fetch('/songs', {
+      fetch('http://localhost:3000/songs', {
         method: 'GET',
         header: {
           'content-type': 'application/json'
@@ -31,7 +31,7 @@ export default class Music extends Component {
     }
     render () {
       return (
-        <div className="container">
+        <div className="music-container">
           <h1>Music</h1>
 
           {
