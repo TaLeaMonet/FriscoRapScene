@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArtistForm from './artist-form';
-import SubmitMusicForm from './submit-music-form';
-
+import SubmitSongForm from './submit-song-form';
+import SubmitVideoForm from './submit-video-form';
 
 export default class Submit extends Component {
   render () {
@@ -19,8 +19,9 @@ export default class Submit extends Component {
           <p>
           To have your songs featured on the Frisco Rap Scene website, you <b>must</b> have a Spotify account.
           Log in to your Spotify account and select the song you want featured. Copy the song link and enter it into the form below
-          along with your artist name and the name of the song.
+          along with your artist name and the name of the song. <a href="http://www.spotify.com" target="_blank" rel="noopener noreferrer">Login to your Spotify account here</a>
           </p>
+          <SubmitSongForm />
 
           <h2>Video Submissions:</h2>
           <p>
@@ -28,8 +29,8 @@ export default class Submit extends Component {
           you want featured and select 'embed'. Copy the youtube link and enter it into the form below along with your artist name and
           the name of the song.
           </p> <br/>
-          <div className="card">
-            <SubmitMusicForm />
+          <div>
+            <SubmitVideoForm />
           </div>
         </div>
 
