@@ -35,7 +35,7 @@ export default class Search extends Component {
     console.log(this.state.results)
     return (
         <div className="search-results-container">
-          <h1>Search Results For...</h1>
+          <h1 className="page-heading">Search Results For...</h1>
 
           {
             this.state.results.map(result => {

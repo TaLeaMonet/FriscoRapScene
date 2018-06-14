@@ -4,21 +4,40 @@ body {
   padding-bottom: 60px;
   font-family: sans-serif;
   display:table;
-  width: 100vw;
-  height: 100vh;
-  border: 3px solid orange;
+  height:100vh;
+  width:100vw;
+  background-image: url("homepage-logo/frisco-rap-scene.png");
+  background-repeat: no-repeat;
+  background-size:  100% 150%;
+  background-position: center;
+
 }
 
-.navbar {
-  background-color: orange;
+
+.navbar{
+  background-color: #d2691e;;
   background-repeat: repeat;
   position: relative;
+  font-family: Lobster, cursive;
 }
 
-.navbar-form, .navbar-right, .search-form {
-float: right;
-margin: 10px;
+.page-heading {
+    font-family: Lobster, cursive;
+    font-color: #d2691e;
+    background-color: #d2691e;
 }
+
+.page-subtitle {
+    font-family: Lobster, cursive;
+    background-color: #d2691e;
+
+}
+
+.submissions, .submission-instructions {
+  background-color: #d2691e;
+  border: thick, dashed;
+}
+
 
 .wrapper {
   padding:20px;
@@ -43,13 +62,13 @@ margin: 10px;
   width: 50%;
   padding: 20px;
   padding-top: 70px;
-  background-color: orange;
+  background-color: #d2691e;
   margin: auto;
 
 }
 
  footer {
-   background-color:orange;
+   background-color:#d2691e;
    display:table-row;
    height:50px;
    width:100%;
@@ -60,26 +79,9 @@ margin: 10px;
 
  }
 
- .logo-display {
-   /* height:100vh;
-   width:100vw;
-   display:table; */
-   background-image: url("homepage-logo/frisco-rap-scene.png");
-   background-repeat: no-repeat;
-   background-size:  100% 200%;
-   background-position: center;
-   height: 75vh;
- }
-
- .navbar {
-   margin-bottom: 0px;
- }
-
 .homepage-welcome {
   font-family: Lobster, cursive;
   font-size: 55px;
-  /* border: 3px solid green; */
-  /* display: flex;
-  justify-content: flex-start; */
-  margin-left: 40%;
+  background-color: #d2691e;
+
 }
