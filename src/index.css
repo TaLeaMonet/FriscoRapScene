@@ -3,19 +3,24 @@ body {
   padding: 0;
   padding-bottom: 60px;
   font-family: sans-serif;
-  display:table;
+}
+
+.logo-display {
   height:100vh;
   width:100vw;
+  margin-top: -2%;
   background-image: url("homepage-logo/frisco-rap-scene.png");
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size:  100% 150%;
-  background-position: center;
-
+  background-attachment: fixed;
+  background-size: 100% 150%;
+  position: fixed;
 }
 
 
 .navbar{
-  background-color: #d2691e;;
+  font-color: #d2691e;
+  background-color: #d2691e;
   background-repeat: repeat;
   position: relative;
   font-family: Lobster, cursive;
@@ -24,16 +29,15 @@ body {
 .page-heading {
     font-family: Lobster, cursive;
     font-color: #d2691e;
-    background-color: #d2691e;
+    length: 100%;
 }
 
 .page-subtitle {
     font-family: Lobster, cursive;
-    background-color: #d2691e;
 
 }
 
-.submissions, .submission-instructions {
+.submission-instructions {
   background-color: #d2691e;
   border: thick, dashed;
 }
@@ -44,7 +48,7 @@ body {
   height:auto;
 }
 
-.box, .music-container{
+.box, .music-container {
     float:left;
     margin: 10px;
 
@@ -70,12 +74,12 @@ body {
  footer {
    background-color:#d2691e;
    display:table-row;
-   height:50px;
+   height: 35px;
    width:100%;
    position:fixed;
    bottom:0px;
-   margin-top: 5%;
-   padding-bottom: 0%;
+   margin-top: 3%;
+   padding-bottom: 4%;
 
  }
 
@@ -83,5 +87,6 @@ body {
   font-family: Lobster, cursive;
   font-size: 55px;
   background-color: #d2691e;
+  opacity: 0.5;
 
 }

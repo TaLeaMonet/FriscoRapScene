@@ -106,6 +106,7 @@ app.post('/artist-form', function (req, res) {
      let title = req.body.title.replace(/'+/g, "");
      let link = req.body.link;
      let song = req.body.song;
+     let video = req.body.video; 
      let ary = song.split('/');
      let id = ary[ary.length -1];
      let songSubmit = connection.query("INSERT INTO songs (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+id+"')", (err, results) => {
