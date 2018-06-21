@@ -21,16 +21,12 @@
     "reactdom": "^2.0.0",
     "request-promise": "^4.2.2"
   },
-  "scripts": {   
-    "start": "react-scripts start && nodemon server.js",
+  "scripts": {
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
   },
-  "proxy": "http://localhost:8080",
-  "engines": {
-    "node": "9.5."
-  },
-
-}
+  "proxy": "http://localhost:8080"
+},
