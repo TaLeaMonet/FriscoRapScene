@@ -21,8 +21,8 @@
     "reactdom": "^2.0.0",
     "request-promise": "^4.2.2"
   },
-  "scripts": {
-    "start": "react-scripts build && react-scripts start",
+  "scripts": {   
+    "start": "react-scripts start && nodemon server.js",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
