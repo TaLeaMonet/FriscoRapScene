@@ -79,8 +79,12 @@ body {
    position:fixed;
    bottom:0px;
    margin-top: 3%;
-   padding-bottom: 4%;
+   padding-bottom: 5%;
 
+ }
+
+ .fab {
+   color: #000000;
  }
 
 .homepage-welcome {

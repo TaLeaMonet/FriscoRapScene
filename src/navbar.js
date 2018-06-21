@@ -43,7 +43,7 @@ export default class Navbar extends Component {
         <Route exact path="/music" component={Music}/>
         <Route exact path="/videos" component={Videos}/>
         <Route exact path="/submit" component={Submit}/>
-        <Route path="/search/:input" component={Search}/>
+        <Route exact path="/search-form" component={Search}/>
         </div>
       </div>
    </Router>
