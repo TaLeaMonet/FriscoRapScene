@@ -5,6 +5,7 @@
   "dependencies": {
     "ajv": "^6.5.0",
     "axios": "^0.18.0",
+    "concurrently": "^3.6.0",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "db-migrate-mysql": "^1.1.10",
@@ -22,11 +23,16 @@
     "request-promise": "^4.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"yarn server\" \"yarn client\"",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
     "test": "jest",
     "eject": "react-scripts eject",
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
+  },
+  "engines": {
+    "yarn" : "1.7.0",
+    "node" : "10.5.0"
   },
   "proxy": "http://localhost:8080"
 }
