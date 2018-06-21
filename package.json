@@ -22,11 +22,15 @@
     "request-promise": "^4.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts build && react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "engines": {
+    "node": "9.5."
+  },
+
 }
