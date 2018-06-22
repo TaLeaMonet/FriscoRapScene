@@ -6,7 +6,7 @@ const mysql = require("mysql");
 // const mySqlKey = require('./keys').mySql
 const cors = require('cors')
 const requestPromise = require( 'request-promise' );
-const PORT = 8080 //process.env.PORT || // 8080;
+const PORT = process.env.PORT || 8080;
 const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/user';
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 
@@ -17,6 +17,7 @@ app.use(cors())
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.static("client/build"));
 
 
 app.get('/spotifylogin', (req, res) => {
@@ -106,6 +107,7 @@ app.post('/artist-form', function (req, res) {
      let title = req.body.title.replace(/'+/g, "");
      let link = req.body.link;
      let song = req.body.song;
+     let video = req.body.video;
      let ary = song.split('/');
      let id = ary[ary.length -1];
      let songSubmit = connection.query("INSERT INTO songs (artist, title, link) VALUES('"+artist+"', '"+title+"', '"+id+"')", (err, results) => {

@@ -43,7 +43,7 @@ export default class SearchForm extends Component {
     return (
 
     <div className="search-form">
-    <form className="navbar-form navbar-right" onSubmit={this.handleSubmission}>
+    <form className="navbar-form navbar-right" onSubmit={console.log(this.handleSubmission)}>
       <div className="form-group">
         <input type="text" name="query" id="query"
         className="form-control"
