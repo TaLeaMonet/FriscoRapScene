@@ -25,7 +25,7 @@
   "scripts": {
     "start": "concurrently \"yarn server\" \"yarn client\"",
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
+    "server": "node server.js",
     "test": "jest",
     "eject": "react-scripts eject",
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
