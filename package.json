@@ -30,8 +30,8 @@
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
   },
   "engines": {
-    "yarn" : "1.7.0",
-    "node" : "10.5.0"
+    "yarn": "1.7.0",
+    "node": "10.5.0"
   },
   "proxy": "http://localhost:8080"
 }

@@ -3,12 +3,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const mysql = require("mysql");
-// const mySqlKey = require('./keys').mySql
 const cors = require('cors')
 const requestPromise = require( 'request-promise' );
 const PORT = process.env.PORT || 8080;
 const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/user';
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+
 
 
 
