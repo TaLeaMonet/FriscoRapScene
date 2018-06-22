@@ -24,7 +24,6 @@
   },
   "scripts": {
     "start": "concurrently \"yarn server\" \"yarn client\"",
-    "client": "cd client && yarn start",
     "server": "node server.js",
     "test": "jest",
     "eject": "react-scripts eject",
