@@ -24,7 +24,8 @@
   },
   "scripts": {
     "start": "concurrently \"yarn server\" \"yarn client\"",
-    "server": "node server.js",
+    "client": "react-scripts start",
+    "server": "node express-server/server.js",
     "test": "jest",
     "eject": "react-scripts eject",
     "dev-migrate": "db-migrate up --config express-server/database.json -e dev"
