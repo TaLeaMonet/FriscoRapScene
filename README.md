@@ -5,13 +5,16 @@ Online platform dedicated to providing support and exposure to San Francisco bas
 
 -setup/installation instructions:
 ``run npm install``
+download & install node.js <br/>
+Install Yarn 
 
 
 -command to start frontend & server
 to start create-react-app run ``yarn start``
 to start server run ``node server.js``
 
--db Setup
+-db Setup <br/>
+Using MySql
 create a database named frisco-rap-Scene
 and create tables for artists, songs and videos.
 fields for artists include: name, artist name, email and location
