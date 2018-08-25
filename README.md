@@ -19,7 +19,7 @@ fields for songs include: title, length and artist id
 fields for videos include: title, length, link
 
 
--Current features list
+-Current features list <br/>
 Songs section <br/>
 Videos section <br/>
 Artist Submission section
