@@ -4,7 +4,7 @@ Online platform dedicated to providing support and exposure to San Francisco bas
 [Google Docs Project Plan](https://docs.google.com/document/d/1VeNOotN3L_lYcabDLT5oVjgLYO6SmqnziV2deHRebAQ)
 
 -setup/installation instructions:
-``run npm install``
+``run npm install`` <br/>
 download & install node.js <br/>
 Install Yarn 
 
