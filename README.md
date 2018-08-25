@@ -29,4 +29,4 @@ Artist Submission section
 
 -later features
 
-the ability to watch videos from YouTube, the ability to  play music from Spotify, the ability to search for content stored in the database.
+The ability to search for content stored in the database, the ability to submit and view events calendar. 
