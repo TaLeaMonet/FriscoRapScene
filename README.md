@@ -20,8 +20,9 @@ fields for videos include: title, length, link
 
 
 -Current features list
-
-besides the basic website structure and the ability to navigate from page to page, there are no features built at this time.
+Songs section
+Videos section
+Artist Submission section
 
 -later features
 
