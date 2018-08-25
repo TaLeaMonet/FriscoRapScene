@@ -20,8 +20,8 @@ fields for videos include: title, length, link
 
 
 -Current features list
-Songs section
-Videos section
+Songs section <br/>
+Videos section <br/>
 Artist Submission section
 
 -later features
