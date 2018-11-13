@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Home from './Homepage';
-import Music from './Music';
-import Videos from './Videos';
-import Submit from './Submit';
-import Search from './Search';
-import SearchForm from './search-form';
+import Home from '../Homepage';
+import Music from '../Music';
+import Videos from '../Videos';
+import Submit from '../Submit';
+import Search from '../Search';
+import SearchForm from '../search-form';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 
