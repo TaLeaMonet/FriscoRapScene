@@ -6,6 +6,8 @@ import SubmitVideoForm from './submit-video-form';
 export default class Submit extends Component {
   render () {
     return (
+        
+
         <div className="container">
           <h1 className="page-heading">Submissions: How To Get Your Content Featured On Frisco Rap Scene</h1>
           <h2 className="page-subtitle">Artist Submissions</h2>

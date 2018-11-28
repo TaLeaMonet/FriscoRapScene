@@ -23,17 +23,17 @@ body {
   background-color: #d2691e;
   background-repeat: repeat;
   position: relative;
-  font-family: Lobster, cursive;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 
 .page-heading {
-    font-family: Lobster, cursive;
+    font-family: 'Allerta Stencil', sans-serif;
     font-color: #d2691e;
     length: 100%;
 }
 
 .page-subtitle {
-    font-family: Lobster, cursive;
+    font-family: 'Allerta Stencil', sans-serif;
 
 }
 
