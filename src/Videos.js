@@ -45,7 +45,7 @@ export default class Videos extends Component {
 
     render () {
       return (
-        <div>
+        <div className="wrapper">
           <h1 className="page-heading">Videos</h1>
 
 

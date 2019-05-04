@@ -43,7 +43,7 @@ const connection = mysql.createConnection({
   database: "Frisco Rap Scene"
 });
 
-app.get('/videos', function (req, res) {
+app.get(' /videos', function (req, res) {
   let videos = connection.query("SELECT * FROM videos", (err, results) => {
     if(err) throw err;
     console.log(JSON.parse(JSON.stringify(results)));

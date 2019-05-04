@@ -31,7 +31,7 @@ export default class Music extends Component {
     }
     render () {
       return (
-        <div className="music-container">
+        <div className="wrapper">
           <h1 className="page-heading">Music</h1>
 
           {
